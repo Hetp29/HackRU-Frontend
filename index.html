@@ -4,5 +4,27 @@
     </head>
     <body>
         <h1 class="bg-red-300">Hello world</h1>
+        <body>
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="w-full max-w-md">
+                  <input id="slider" type="range" min="1" max="4000" class="w-full" />
+                  <output id="sliderValue" class="block text-center mt-4 text-gray-900"></output>
+                </div>
+              </div>
     </body>
+
+    <script>
+        // Get the slider and output elements
+        const slider = document.getElementById('slider');
+        const output = document.getElementById('sliderValue');
+        
+        // Update the output value when slider value changes
+        slider.addEventListener('input', function() {
+          output.textContent = this.value;
+        });
+      
+        // Initialize output value
+        output.textContent = slider.value;
+      </script>
+      
 </html>
