@@ -1,17 +1,36 @@
 <html>
     <head>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <style>
+            .welcome-text {
+                font-family: 'Poppins', sans-serif;
+                font-size: 4rem;
+                color: #3B82F6;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            
+            .slider-thumb-blue::-webkit-slider-thumb {
+  background-color: green; /* Change thumb color for webkit browsers */
+}
+
+.slider-thumb-blue::-moz-range-thumb {
+  background-color: green; /* Change thumb color for Mozilla Firefox */
+}
+
+        </style>
     </head>
     <body>
-        <h1 class="bg-red-300">Hello world</h1>
+        <div class="flex items-center justify-center min-h-screen flex-col">
+            <h1 class="bg-red-300 welcome-text">Welcome to NutriPal!</h1> <!-- Added welcome-text class -->
+            <div class="w-full max-w-md">
+                <input id="slider" type="range" min="0" max="4000" class="w-1/3 slider-thumb-blue" />
+                <output id="sliderValue" class="block text-center mt-4 text-gray-900"></output>
+            </div>
+        </div>
         <body>
-            <div class="flex items-center justify-center min-h-screen">
-                <div class="w-full max-w-md">
-                  <input id="slider" type="range" min="1" max="4000" class="w-full" />
-                  <output id="sliderValue" class="block text-center mt-4 text-gray-900"></output>
-                </div>
-              </div>
-    </body>
+            
 
     <script>
         // Get the slider and output elements
