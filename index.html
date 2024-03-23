@@ -10,7 +10,7 @@
             color: #3B82F6;
             font-weight: bold;
             text-align: center;
-            margin-bottom: 30rem;
+            
             
         }
 
@@ -20,8 +20,45 @@
             background-size: cover;
             background-position: center;
             min-height: 100vh;
+            /*overflow-y: hidden;*/
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 2rem;
+            margin-right: auto;
+            padding-left: 7%;
+        }
+
+        .card {
+            width: 100%;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem; 
+        }
+
+        .slider-output {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .slider-label {
+            margin-right: 1rem;
         }
         
+        #textValue {
+            width: 60px;
+        }
+
+    
 
     </style>
 
@@ -29,29 +66,76 @@
     <body>
         <div class="flex items-center justify-center min-h-screen flex-col">
             <h1 class="bg-red-300 welcome-text">NutriPal</h1> <!-- Added welcome-text class -->
-            <form>
-            <div class="w-full max-w-md">
-                <label>Calorie Goal:</label>
-                <input id="slider" type="range" min="0" max="4000" value="2000" class="w-3/10 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
-                <output id="sliderValue" class="block text-center mt-4 text-gray-900"></output>
+            <div class="card-container">
+                <!-- Daily Goal Card -->
+                <div class="card">
+                    <h2 class="text-lg font-bold mb-4 text-center">Daily Goal</h2>
+                    <form class="text-center">
+                        
+                        <div class = "slider-container">
+                            <label class="block text-sm font-semibold mb-1">Calorie Goal:</label>
+                            <input id="slider" type="range" min="0" max="4000" value="2000" class="slider w-3/10 h-2 bg-green-400 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 slider-thumb-green">
+                            <input id="textValue" class="textValue block bg-transperent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Value"></input>
+                        </div>
+                        <div class = "slider-container">
+                            <label class="block text-sm font-semibold mb-1">Protein:</label>
+                            <input id="slider" type="range" min="0" max="4000" value="2000" class="slider w-3/10 h-2 bg-green-400 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 slider-thumb-green">
+                            <input id="textValue" class="textValue block bg-transperent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Value"></input>
+                        </div>
+                        <div class = "slider-container">
+                            <label class="block text-sm font-semibold mb-1">Fat:</label>
+                            <input id="slider" type="range" min="0" max="4000" value="2000" class="slider w-3/10 h-2 bg-green-400 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 slider-thumb-green">
+                            <input id="textValue" class="textValue block bg-transperent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Value"></input>
+                        </div>
+                        <div class = "slider-container">
+                            <label class="block text-sm font-semibold mb-1">Carbs:</label>
+                            <input id="slider" type="range" min="0" max="4000" value="2000" class="slider w-3/10 h-2 bg-green-400 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 slider-thumb-green">
+                            <input id="textValue" class="textValue block bg-transperent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Value"></input>
+                        </div>
+                        <div class = "slider-container">
+                            <label class="block text-sm font-semibold mb-1">Sugar:</label>
+                            <input id="slider" type="range" min="0" max="4000" value="2000" class="slider w-3/10 h-2 bg-green-400 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 slider-thumb-green">
+                            <input id="textValue" class="textValue block bg-transperent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Value"></input>
+                        </div>
+                        <div class = "slider-container">
+                            <label class="block text-sm font-semibold mb-1">Fiber:</label>
+                            <input id="slider" type="range" min="0" max="4000" value="2000" class="slider w-3/10 h-2 bg-green-400 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 slider-thumb-green">
+                            <input id="textValue" class="textValue block bg-transperent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Value"></input>
+                        </div>
+                        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 mx-auto">Save Goals</button>
+                        
+                    </form>
+                
+                </div>
             </div>
-        </form>
+            
         </div>
         <body>
             
 
-    <script>
-        // Get the slider and output elements
-        const slider = document.getElementById('slider');
-        const output = document.getElementById('sliderValue');
-        
-        // Update the output value when slider value changes
-        slider.addEventListener('input', function() {
-          output.textContent = this.value;
-        });
-      
-        // Initialize output value
-        output.textContent = slider.value;
-      </script>
+            <script>
+                // Get all sliders and text inputs
+                const sliders = document.querySelectorAll('.slider');
+                const textInputs = document.querySelectorAll('.textValue');
+              
+                // Function to update text inputs based on slider value
+                function updateTextInput(slider) {
+                  const value = slider.value;
+                  // Find the corresponding text input and update its value
+                  const textInput = slider.nextElementSibling;
+                  textInput.placeholder = value;
+                }
+              
+                // Attach event listeners to all sliders
+                sliders.forEach(slider => {
+                  // Initial update
+                  updateTextInput(slider);
+                  // Update on input change
+                  slider.addEventListener('input', function() {
+                    updateTextInput(this);
+                  });
+                });
+              </script>
+              
       
 </html>
