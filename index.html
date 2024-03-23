@@ -25,13 +25,21 @@
 
         .card-container {
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between;
             margin-top: 2rem;
             margin-right: auto;
-            padding-left: 7%;
+            padding-left: 0 7%;
         }
 
-        .card {
+        .card1 {
+            width: 100%;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .card2 {
             width: 100%;
             padding: 2rem;
             border-radius: 0.5rem;
@@ -68,7 +76,7 @@
             <h1 class="bg-red-300 welcome-text">NutriPal</h1> <!-- Added welcome-text class -->
             <div class="card-container">
                 <!-- Daily Goal Card -->
-                <div class="card">
+                <div class="card1">
                     <h2 class="text-lg font-bold mb-4 text-center">Daily Goal</h2>
                     <form class="text-center">
                         
@@ -107,6 +115,48 @@
                     </form>
                 
                 </div>
+            </div>
+            <div class="card2">
+                <h2 class="text-lg font-bold mb-4 text-center">Progress</h2>
+                <form class="text-center">
+                    <div class="slider-container">
+                        <label class="block text-sm font-semibold mb-1">Calorie Progress:</label>
+                        <input id="slider" type="range" min="0" max="4000" value="1500" class="slider w-3/10 h-2 bg-yellow-400 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 slider-thumb-yellow">
+                        <input id="textValue" class="textValue block bg-transperent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Value"></input>
+                    </div>
+                    <div class="slider-container">
+                        <label class="block text-sm font-semibold mb-1">Protein Progress:</label>
+                        <input id="slider" type="range" min="0" max="4000" value="1500" class="slider w-3/10 h-2 bg-yellow-400 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 slider-thumb-yellow">
+                        <input id="textValue" class="textValue block bg-transperent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Value"></input>
+                    </div>
+                    <div class="slider-container">
+                        <label class="block text-sm font-semibold mb-1">Fat Progress:</label>
+                        <input id="slider" type="range" min="0" max="4000" value="1500" class="slider w-3/10 h-2 bg-yellow-400 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 slider-thumb-yellow">
+                        <input id="textValue" class="textValue block bg-transperent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Value"></input>
+                    </div>
+                    <div class="slider-container">
+                        <label class="block text-sm font-semibold mb-1">Fat Progress:</label>
+                        <input id="slider" type="range" min="0" max="4000" value="1500" class="slider w-3/10 h-2 bg-yellow-400 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 slider-thumb-yellow">
+                        <input id="textValue" class="textValue block bg-transperent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Value"></input>
+                    </div>
+                    <div class="slider-container">
+                        <label class="block text-sm font-semibold mb-1">Carbs Progress:</label>
+                        <input id="slider" type="range" min="0" max="4000" value="1500" class="slider w-3/10 h-2 bg-yellow-400 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 slider-thumb-yellow">
+                        <input id="textValue" class="textValue block bg-transperent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Value"></input>
+                    </div>
+                    <div class="slider-container">
+                        <label class="block text-sm font-semibold mb-1">Sugar Progress:</label>
+                        <input id="slider" type="range" min="0" max="4000" value="1500" class="slider w-3/10 h-2 bg-yellow-400 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 slider-thumb-yellow">
+                        <input id="textValue" class="textValue block bg-transperent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Value"></input>
+                    </div>
+                    <div class="slider-container">
+                        <label class="block text-sm font-semibold mb-1">Fiber Progress:</label>
+                        <input id="slider" type="range" min="0" max="4000" value="1500" class="slider w-3/10 h-2 bg-yellow-400 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 slider-thumb-yellow">
+                        <input id="textValue" class="textValue block bg-transperent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Value"></input>
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 mx-auto">Save Goals</button>
+
+                </form>
             </div>
             
         </div>
